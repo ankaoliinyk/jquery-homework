@@ -4,5 +4,8 @@
 безпосередньо над відповідним елементом `<h3>`.
  */
 $(document).ready(function () {
-  // ваш код
+  $("h3").next("div").each(function(index, element) {
+    let $element = $(element);
+    $element.prev().before($element);
+  })
 });
